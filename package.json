@@ -1,0 +1,14 @@
+{
+  "name": "pokemon-game",
+  "version": "1.0.0",
+  "description": "A simple pokemon game designed to use all the webdev technologies I have learnt so far.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kaleb Muir",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
