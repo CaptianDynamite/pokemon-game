@@ -1,2 +1,4 @@
-    <script src="<%= jsPath %>"></script>
+    <% jsPaths.forEach( function (element) { %>
+        <script src="<%= element %>"></script>
+    <% }); %>
 </html>

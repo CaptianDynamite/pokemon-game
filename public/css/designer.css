@@ -1,0 +1,13 @@
+body {
+    background-color: black;
+}
+.scrollable {
+    overflow: hidden scroll;
+    height: 500px;
+}
+.no-scroll {
+    overflow: hidden;
+}
+.tile {
+    background-color: white;
+}

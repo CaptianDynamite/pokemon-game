@@ -3,21 +3,19 @@ body {
 }
 #game-tiles {
     position: fixed;
-    top: 0%;
-    left: 0;
+    top: 80px;
+    left: 80px;
 
-    width: 100%;
-    height: 100%;
-    padding: 5rem;
+    width: 256px;
+    height: 192px;
 }
 #frame {
     position: fixed;
     top: 0;
     left: 0;
 
-    width: 100%;
-    height: 100%;
-    padding: 5rem;
+    width: 416px;
+    height: 352px;
 
     box-shadow: inset 0 0 0 5rem red;
 }

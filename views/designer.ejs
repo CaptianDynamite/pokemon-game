@@ -1,0 +1,27 @@
+<%- include("partials/begin.ejs") -%>
+
+<body class="no-scroll">
+
+    <div class="row">
+        <section id="level-tiles" class="col-md-9">
+
+        </section>
+        <div class="col-md-3">
+            <section id="level-options">
+                <form id="tile-dimension-form">
+                    <label>Input dimensions</label>
+                    <input type="number" min="1" max="999" name="width" placeholder="Width">
+                    ×
+                    <input type="number" min="1" max="999" name="height" placeholder="Height">
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <section class="scrollable" id="tile-set">
+                <img id="tile-set" src="/images/tileset-outside.png" alt="pokemon-outside-tileset">
+            </section>
+            <div id="current-tile-display"></div>
+        </div>
+    </div>
+</body>
+
+<%- include("partials/end.ejs") -%>
