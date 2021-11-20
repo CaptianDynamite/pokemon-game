@@ -2,26 +2,36 @@
 
 <body class="no-scroll">
     <div class="row">
-        <section id="level-tiles" tabindex="0" class="col-md-9"></section>
-        <div class="col-md-3">
+        <section id="level-editor" tabindex="0" class="col-md-9">
+            <div id="level-tiles"></div>
+        </section>
+        <div id="options" class="col-md-3">
             <section id="level-options">
                 <form id="tile-dimension-form">
-                    <label>Input dimensions</label>
-                    <input type="number" min="1" max="999" name="width" placeholder="Width">
-                    ×
-                    <input type="number" min="1" max="999" name="height" placeholder="Height">
-                    With
-                    <input type="number" min="1" max="10" name="layers" placeholder="Layers">
-                    <button type="submit">Submit</button>
+                    <div class="form-group">
+                        <label>Input dimensions</label>
+                        <input class="form-control" type="number" min="1" max="999" name="width" placeholder="Width" required>
+                        ×
+                        <input class="form-control" type="number" min="1" max="999" name="height" placeholder="Height" required>
+                    </div>
+                    <div class="form-group">
+                        With
+                        <input class="form-control" type="number" min="1" max="10" name="layers" placeholder="Layers" required>
+                    </div>
+                    <button class="btn btn-large btn-outline-primary" type="submit">Submit</button>
                 </form>
             </section>
-            <section class="scrollable" id="tile-set">
-                <img id="tile-set" src="/images/tileset-outside.png" alt="pokemon-outside-tileset">
+            <section id="tile-selector" class="scrollable">
+                <div id="selector">
+                    <div id="selection-box"></div>
+                    <img id="tile-set" src="/images/tileset-outside.png" alt="pokemon-outside-tileset">
+                </div>
             </section>
-            <div><p>Layer: <strong id="layer-number-display">0</strong></p></div>
-            <div id="current-tile-display"></div>
         </div>
     </div>
+    <section id="bottom-info-bar">
+        <div><p>Layer: <strong id="layer-number-display">0</strong></p></div>
+    </section>
 </body>
 
 <%- include("partials/end.ejs") -%>

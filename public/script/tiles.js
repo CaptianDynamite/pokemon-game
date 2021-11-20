@@ -127,6 +127,10 @@ function formatToFixed(number, digits) {
 }
 function generateEmptyTileGrid(xDivs, yDivs, tileWidth, tileHeight, tileGrid, layers= 1) {
     const gridHandle = $(tileGrid);
+    gridHandle.css({
+        width: tileWidth * xDivs,
+        height: tileHeight * yDivs
+    });
     let tiles = [];
     //Generate tiles row by row
     for (let y = 0; y < yDivs; y++) {

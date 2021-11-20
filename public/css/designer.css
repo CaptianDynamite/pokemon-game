@@ -1,10 +1,39 @@
 body {
-    background-color: black;
+    background-color: white;
 }
 .scrollable {
     overflow: hidden scroll;
-    height: 500px;
 }
 .no-scroll {
-    overflow: hidden;
+    overflow: scroll;
+}
+#tile-set {
+    border: 1px lightgrey dashed;
+}
+#level-editor {
+    position: relative;
+    background-color: black;
+}
+#level-tiles {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#tile-selector {
+    text-align: center;
+}
+#selector {
+    position: relative;
+    height: 400px;
+    width: 256px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#selection-box {
+    position: absolute;
+    border: 1px dashed mediumpurple;
+    width: 0;
+    height: 0;
 }

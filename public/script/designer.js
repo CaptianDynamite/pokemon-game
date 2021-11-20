@@ -11,10 +11,9 @@ function boundingTileCoordsBottom(coord, xOffset, yOffset) {
 function drawPreview(topLeftCoords, bottomRightCoords) {
     let width = bottomRightCoords.right - topLeftCoords.left;
     let height = bottomRightCoords.bottom - topLeftCoords.top;
-    $("#current-tile-display").css({
-        backgroundImage: "url(/images/tileset-outside.png)",
-        backgroundPositionX: -topLeftCoords.left,
-        backgroundPositionY: -topLeftCoords.top,
+    $("#selection-box").css({
+        left: topLeftCoords.left + "px",
+        top: topLeftCoords.top + "px",
         width: width + "px",
         height: height + "px"
     });
@@ -92,7 +91,7 @@ let layers = 0;
 let currentLayer = 0;
 let additiveMode = false;
 
-$("#level-tiles").on('keyup', function (event) {
+$("#level-editor").on('keyup', function (event) {
     //Keypress is between '0' (keycode 48) and '9' (keycode 57)
     let keyCode = event.keyCode;
     if (keyCode >= 48 && keyCode <= 57) {
